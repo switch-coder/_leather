@@ -648,7 +648,6 @@ async function initialize() {
     if (url.search.split("=")[0] === "?menu") {
       document.getElementById("blog-posts").style.display = "none";
       document.getElementById("contents").style.display = "block";
-      document.getElementById("target").style.display = "none";
 
       try {
         fetch(origin + "menu/" + url.search.split("=")[1])
@@ -665,7 +664,6 @@ async function initialize() {
     } else if (url.search.split("=")[0] === "?post") {
       document.getElementById("contents").style.display = "block";
       document.getElementById("blog-posts").style.display = "none";
-      document.getElementById("target").style.display = "none";
 
       postNameDecode = decodeURI(url.search.split("=")[1]).replaceAll("+", " ");
       // console.log(postNameDecode);
